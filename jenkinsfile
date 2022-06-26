@@ -17,9 +17,10 @@ node() {
        }
 
        stage('Build MVN'){
-            mvn install
 
             sh 'ls'
+            sh 'mvn install'
+
        }
 
        stage('Deploy'){
