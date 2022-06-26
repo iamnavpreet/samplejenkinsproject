@@ -1,0 +1,44 @@
+node() {
+
+
+
+       stage('Checkout'){
+          checkout scm
+
+          print("checkout")
+       }
+
+       stage('Test'){
+
+         env.NODE_ENV = "test"
+
+         print "Environment will be : ${env.NODE_ENV}"
+
+       }
+
+       stage('Build Docker'){
+
+            sh 'ls'
+       }
+
+       stage('Deploy'){
+
+         echo 'Push to Repo'
+         sh 'pwd'
+
+         echo 'ssh to web server and tell it to pull new image'
+
+       }
+
+       stage('Cleanup'){
+
+         echo 'prune and cleanup'
+    
+    
+       }
+
+
+
+    }
+    
+
