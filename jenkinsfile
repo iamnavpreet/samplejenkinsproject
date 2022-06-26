@@ -16,7 +16,8 @@ node() {
 
        }
 
-       stage('Build Docker'){
+       stage('Build MVN'){
+            mvn install
 
             sh 'ls'
        }
