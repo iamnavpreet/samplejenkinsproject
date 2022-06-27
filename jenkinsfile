@@ -25,7 +25,12 @@ node() {
             sh 'mvn install'
 
        }
+       stage('Deploy Gate'){
 
+         echo 'Say yes / no before deplying'
+         sh 'pwd'
+
+       }
        stage('Deploy'){
 
          echo 'Push to Repo'
